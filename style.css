@@ -20,6 +20,10 @@ html {
     scroll-behavior: smooth;
 }
 
+section {
+    scroll-margin-top: 110px;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
@@ -64,6 +68,17 @@ body {
 
 .nav a:hover {
     color: var(--accent-color);
+}
+
+.nav a:focus-visible,
+.hero-actions .btn:focus-visible,
+.project-actions .btn:focus-visible,
+.github-icon:focus-visible,
+.contact-item a:focus-visible,
+.social-icons a:focus-visible,
+.contact-form .btn:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
 }
 
 /* --- Hero Section --- */
