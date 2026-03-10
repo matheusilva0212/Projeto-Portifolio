@@ -3,23 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matheus Silva - Engenheiro de Software especializado em desenvolvimento web moderno, React, Node.js e arquitetura de software.">
+    <meta name="keywords" content="desenvolvedor web, engenheiro de software, React, Node.js, Python, AWS">
+    <meta name="author" content="Matheus Silva">
+    <meta property="og:title" content="Matheus Silva - Engenheiro de Software">
+    <meta property="og:description" content="Portfólio profissional de Matheus Silva - Desenvolvedor web especializado em soluções modernas e escaláveis.">
+    <meta property="og:type" content="website">
     <title>Matheus Silva - Engenheiro de Software</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <header class="header">
         <div class="container">
-            <h1 class="logo">Matheus Silva</h1>
+            <h1 class="logo">Matheus Silva <span class="status-badge">Open to Work</span></h1>
             <nav class="nav">
                 <a href="#inicio">Início</a>
                 <a href="#sobre">Sobre</a>
+                <a href="#experiencia">Experiência</a>
                 <a href="#projetos">Projetos</a>
                 <a href="#contato">Contato</a>
             </nav>
         </div>
     </header>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
 
     <main>
         <section id="inicio" class="hero">
@@ -29,7 +46,7 @@
                     <p>Desenvolvedor web especializado em criar soluções modernas e eficientes. Transformo ideias em aplicações web robustas e escaláveis.</p>
                     <div class="hero-actions">
                         <a href="#projetos" class="btn primary">Ver Projetos</a>
-                        <a href="Matheus_Silva_Currículo_atualizado2025.pdf" class="btn secondary" target="_blank" rel="noopener noreferrer">Baixar CV</a>
+                        <a href="MATHEUS CURRICULO DEV 2026 NOVO.docx" class="btn secondary" target="_blank" rel="noopener noreferrer">Baixar CV</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -38,39 +55,39 @@
             </div>
         </section>
 
-        <section id="sobre" class="about">
+        <section id="sobre" class="about fade-in">
             <div class="container">
-                <div class="about-header">
+                <div class="about-header fade-in-left">
                     <h2>Sobre Mim</h2>
                     <p>Apaixonado por tecnologia e desenvolvimento web, com foco em criar experiências digitais excepcionais.</p>
                 </div>
-                <div class="about-content">
+                <div class="about-content fade-in-right">
                     <div class="about-journey">
                         <h3>Minha Jornada</h3>
                         <p>Com experiência sólida em desenvolvimento web, trabalho com as mais modernas tecnologias para criar aplicações que fazem a diferença. Meu foco está em entregar código limpo, escalável e que atenda às necessidades do negócio.</p>
                         <ul>
-                            <li>Frontend & Backend Development</li>
+                            <li>Front-end & Back-end Development</li>
                             <li>Arquitetura de Software</li>
                             <li>APIs e Microsserviços</li>
                         </ul>
                     </div>
                     <div class="about-skills">
-                        <div class="skill-card">
+                        <div class="skill-card stagger-item">
                             <i class="fas fa-code"></i>
-                            <h4>Frontend</h4>
+                            <h4>Front-end</h4>
                             <p>React, Vue.js, TypeScript</p>
                         </div>
-                        <div class="skill-card">
+                        <div class="skill-card stagger-item">
                             <i class="fas fa-server"></i>
-                            <h4>Backend</h4>
+                            <h4>Back-end</h4>
                             <p>Node.js, Python</p>
                         </div>
-                        <div class="skill-card">
+                        <div class="skill-card stagger-item">
                             <i class="fas fa-database"></i>
                             <h4>Database</h4>
                             <p>MySQL, PostgreSQL, MongoDB</p>
                         </div>
-                        <div class="skill-card">
+                        <div class="skill-card stagger-item">
                             <i class="fas fa-cloud"></i>
                             <h4>Cloud</h4>
                             <p>AWS, Docker, CI/CD</p>
@@ -80,14 +97,14 @@
             </div>
         </section>
 
-        <section id="projetos" class="projects">
+        <section id="projetos" class="projects fade-in">
             <div class="container">
                 <div class="projects-header">
                     <h2>Meus Projetos</h2>
                     <p>Uma seleção dos meus trabalhos mais recentes em desenvolvimento web.</p>
                 </div>
                 <div class="projects-grid">
-                    <div class="project-card">
+                    <div class="project-card stagger-item">
                         <div class="project-image-placeholder">E-commerce Platform</div>
                         <h4>Plataforma E-commerce</h4>
                         <p>Sistema completo de e-commerce com painel administrativo, carrinho de compras e integração de pagamentos.</p>
@@ -101,7 +118,7 @@
                             <a href="https://github.com/matheusilva0212" class="github-icon" aria-label="Repositório do projeto no GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card stagger-item">
                         <div class="project-image-placeholder">Task Management App</div>
                         <h4>App de Gestão de Tarefas</h4>
                         <p>Aplicação para gerenciamento de projetos e tarefas com interface intuitiva e colaboração em equipe.</p>
@@ -115,7 +132,7 @@
                             <a href="https://github.com/matheusilva0212" class="github-icon" aria-label="Repositório do projeto no GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card stagger-item">
                         <div class="project-image-placeholder">Real-time Dashboard</div>
                         <h4>Dashboard Analytics</h4>
                         <p>Dashboard em tempo real para análise de dados com gráficos interativos e relatórios personalizados.</p>
@@ -154,22 +171,31 @@
                             <i class="fab fa-github"></i>
                             <a href="https://github.com/matheusilva0212" target="_blank" rel="noopener noreferrer">github.com/matheusilva0212</a>
                         </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/5587981442922" target="_blank">+55 (87) 98144-2922</a>
+                        </div>
+                        <div class="qrcode-container">
+                            <p style="font-size: 0.9rem; margin-top: 15px; font-weight: 600;">WhatsApp QR Code:</p>
+                            <div id="whatsappQR" class="qrcode"></div>
+                        </div>
                     </div>
                     <div class="contact-form">
-                        <form action="#" method="post">
+                        <form id="contactForm">
                             <div class="form-group">
                                 <label for="nome">Nome</label>
-                                <input type="text" id="nome" name="nome" autocomplete="name" required>
+                                <input type="text" id="nome" name="nome" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" autocomplete="email" required>
+                                <input type="email" id="email" name="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="mensagem">Mensagem</label>
                                 <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
                             </div>
-                            <button type="submit" class="btn primary">Enviar Mensagem</button>
+                            <button type="submit" class="btn primary" id="submitBtn">Enviar Mensagem</button>
+                            <div id="formMessage" style="margin-top: 15px; padding: 12px; border-radius: 5px; display: none; text-align: center; font-weight: 600;"></div>
                         </form>
                     </div>
                 </div>
@@ -194,6 +220,7 @@
                     <ul>
                         <li><a href="#inicio">Início</a></li>
                         <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#experiencia">Experiência</a></li>
                         <li><a href="#projetos">Projetos</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
@@ -209,10 +236,204 @@
                 </div>
             </div>
             <div class="footer-copyright">
-                <p>© 2025 Matheus Silva. Todos os direitos reservados.</p>
+                <p>© 2025 MsProg. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
+    <script>
+        // ===== SUPABASE CONFIGURATION =====
+        const SUPABASE_URL = 'https://wdlzffnlnqbfzcflakgq.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndkbHpmZm5sbnFiZnpjZmxha2dxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5MTI0NjYsImV4cCI6MjA4ODQ4ODQ2Nn0.5IZxl_uBIstK3hh-tLkz0CkWWnQF0pDpTar9FJSgkhM';
+
+        // Initialize Supabase with fallback checks
+        // use a different local name to avoid clashing with the global
+        let supabaseClient;
+        if (window.supabase && typeof window.supabase.createClient === 'function') {
+            // depending on the CDN build the global may be named `supabase` or exposed on window
+            const { createClient } = window.supabase;
+            supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        } else if (typeof window.supabase !== 'undefined' && typeof window.supabase.createClient === 'function') {
+            // sometimes the global is already `supabase` without window prefix
+            supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        } else {
+            console.error('Supabase SDK failed to load. Check the <script> tag or network connection.');
+        }
+
+        // ===== CONTACT FORM HANDLER =====
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formMessage = document.getElementById('formMessage');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Get form data
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('mensagem').value.trim();
+
+            // Validate
+            if (!nome || !email || !message) {
+                showMessage('Por favor, preencha todos os campos', 'error');
+                return;
+            }
+
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+
+            try {
+                if (!supabaseClient) {
+                    throw new Error('Supabase client is not initialized');
+                }
+                // Send data to Supabase
+                const { data, error } = await supabaseClient
+                    .from('contacts')
+                    .insert([
+                        {
+                            name: nome,
+                            email: email,
+                            message: message
+                        }
+                    ]);
+
+                if (error) {
+                    console.error('❌ Supabase Error:', error);
+                    console.error('Detalhes:', error.message, error.details, error.hint);
+                    showMessage('❌ Erro: ' + (error.message || 'Tente novamente.'), 'error');
+                } else {
+                    console.log('✅ Mensagem enviada com sucesso!', data);
+                    showMessage('✅ Mensagem enviada com sucesso! Obrigado pelo contato! 🎉', 'success');
+                    contactForm.reset();
+                }
+            } catch (err) {
+                console.error('❌ Unexpected Error:', err);
+                showMessage('❌ Erro ao enviar: ' + err.message, 'error');
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Enviar Mensagem';
+            }
+        });
+
+        // Show message feedback
+        function showMessage(text, type) {
+            formMessage.textContent = text;
+            formMessage.style.display = 'block';
+            formMessage.style.backgroundColor = type === 'success' ? '#d4edda' : '#f8d7da';
+            formMessage.style.color = type === 'success' ? '#155724' : '#721c24';
+            formMessage.style.border = `1px solid ${type === 'success' ? '#c3e6cb' : '#f5c6cb'}`;
+
+            // Auto-hide after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        }
+
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+            themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+
+        // Scroll Progress Bar
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // Scroll Reveal Animation com Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .zoom-in, .rotate-in, .bounce-in, .stagger-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Parallax Effect on Hero Section
+        window.addEventListener('scroll', () => {
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                const scrollPosition = window.pageYOffset;
+                const heroHeight = hero.clientHeight;
+                const distanceFromTop = hero.getBoundingClientRect().top;
+
+                if (distanceFromTop < window.innerHeight) {
+                    const parallaxFactor = 0.5;
+                    hero.style.backgroundPosition = `0 ${scrollPosition * parallaxFactor}px`;
+                }
+            }
+        }, false);
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add glow effect to headings on scroll
+        const headings = document.querySelectorAll('h2, h1');
+        window.addEventListener('scroll', () => {
+            headings.forEach(heading => {
+                const rect = heading.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    heading.classList.add('glow-text');
+                } else {
+                    heading.classList.remove('glow-text');
+                }
+            });
+        });
+
+        // Generate WhatsApp QR Code
+        const whatsappURL = 'https://wa.me/5587981442922';
+        const qrContainer = document.getElementById('whatsappQR');
+        if (qrContainer) {
+            new QRCode(qrContainer, {
+                text: whatsappURL,
+                width: 200,
+                height: 200,
+                colorDark: '#000000',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        }
+    </script>
 </body>
 </html>
