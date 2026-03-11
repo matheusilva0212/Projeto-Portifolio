@@ -10,8 +10,12 @@
     <meta property="og:description" content="Portfólio profissional de Matheus Silva - Desenvolvedor web especializado em soluções modernas e escaláveis.">
     <meta property="og:type" content="website">
     <title>Matheus Silva - Engenheiro de Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
@@ -38,19 +42,49 @@
         <i class="fas fa-moon"></i>
     </button>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <main>
         <section id="inicio" class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h2>Engenheiro de Software</h2>
+                    <h2><span id="typewriter"></span><span class="cursor">|</span></h2>
                     <p>Desenvolvedor web especializado em criar soluções modernas e eficientes. Transformo ideias em aplicações web robustas e escaláveis.</p>
                     <div class="hero-actions">
                         <a href="#projetos" class="btn primary">Ver Projetos</a>
-                        <a href="MATHEUS CURRICULO DEV 2026 NOVO.docx" class="btn secondary" target="_blank" rel="noopener noreferrer">Baixar CV</a>
+                        <a href="assets/docs/Matheus_Silva_CV.docx" class="btn secondary" download="Matheus_Silva_CV.docx" rel="noopener noreferrer">Baixar CV</a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="foto logo.jpg" alt="Ilustração de Matheus Silva" width="250" height="250" loading="lazy">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image">
+                        <img src="assets/img/profile.jpg" alt="Ilustração de Matheus Silva" width="250" height="250" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats fade-in">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item stagger-item">
+                        <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+                        <p>Projetos Entregues</p>
+                    </div>
+                    <div class="stat-item stagger-item">
+                        <span class="stat-number" data-target="2">0</span><span class="stat-suffix">+</span>
+                        <p>Anos de Experiência</p>
+                    </div>
+                    <div class="stat-item stagger-item">
+                        <span class="stat-number" data-target="8">0</span><span class="stat-suffix"></span>
+                        <p>Tecnologias Dominadas</p>
+                    </div>
+                    <div class="stat-item stagger-item">
+                        <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+                        <p>Comprometimento</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -75,22 +109,76 @@
                         <div class="skill-card stagger-item">
                             <i class="fas fa-code"></i>
                             <h4>Front-end</h4>
-                            <p>React, Vue.js, TypeScript</p>
+                            <div class="skill-logos">
+                                <i class="devicon-react-original colored" title="React"></i>
+                                <i class="devicon-vuejs-original colored" title="Vue.js"></i>
+                                <i class="devicon-typescript-original colored" title="TypeScript"></i>
+                            </div>
                         </div>
                         <div class="skill-card stagger-item">
                             <i class="fas fa-server"></i>
                             <h4>Back-end</h4>
-                            <p>Node.js, Python</p>
+                            <div class="skill-logos">
+                                <i class="devicon-nodejs-plain colored" title="Node.js"></i>
+                                <i class="devicon-python-plain colored" title="Python"></i>
+                            </div>
                         </div>
                         <div class="skill-card stagger-item">
                             <i class="fas fa-database"></i>
                             <h4>Database</h4>
-                            <p>MySQL, PostgreSQL, MongoDB</p>
+                            <div class="skill-logos">
+                                <i class="devicon-mysql-plain colored" title="MySQL"></i>
+                                <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
+                                <i class="devicon-mongodb-plain colored" title="MongoDB"></i>
+                            </div>
                         </div>
                         <div class="skill-card stagger-item">
                             <i class="fas fa-cloud"></i>
-                            <h4>Cloud</h4>
-                            <p>AWS, Docker, CI/CD</p>
+                            <h4>Cloud & DevOps</h4>
+                            <div class="skill-logos">
+                                <i class="devicon-amazonwebservices-plain-wordmark colored" title="AWS"></i>
+                                <i class="devicon-docker-plain colored" title="Docker"></i>
+                                <i class="devicon-github-original" title="GitHub Actions / CI/CD"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="experience fade-in">
+            <div class="container">
+                <div class="experience-header fade-in-left">
+                    <h2>Experiência</h2>
+                    <p>Minha trajetória profissional e as tecnologias com as quais trabalhei.</p>
+                </div>
+                <div class="experience-timeline">
+                    <div class="timeline-item stagger-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024 – Presente</span>
+                            <h3>Desenvolvedor Web Freelancer</h3>
+                            <p class="timeline-company">Autônomo</p>
+                            <p>Desenvolvimento de aplicações web completas para clientes, utilizando React, Node.js e bancos de dados relacionais e não-relacionais.</p>
+                            <div class="timeline-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item stagger-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 – 2024</span>
+                            <h3>Desenvolvedor Front-end</h3>
+                            <p class="timeline-company">Projetos Pessoais & Estudos</p>
+                            <p>Construção de interfaces modernas e responsivas, com foco em performance e acessibilidade, utilizando HTML, CSS e JavaScript.</p>
+                            <div class="timeline-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -333,20 +421,32 @@
 
         // Dark Mode Toggle
         const themeToggle = document.getElementById('themeToggle');
-        const htmlElement = document.documentElement;
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-        // Check for saved theme preference or default to light mode
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        if (currentTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        function applyTheme(isDark) {
+            document.body.classList.toggle('dark-mode', isDark);
+            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
         }
 
+        // Prefer saved choice; if none, follow OS theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            applyTheme(savedTheme === 'dark');
+        } else {
+            applyTheme(systemDark.matches);
+        }
+
+        // Listen for OS theme changes (only when user hasn't overridden)
+        systemDark.addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                applyTheme(e.matches);
+            }
+        });
+
         themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-            themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            const isDark = !document.body.classList.contains('dark-mode');
+            applyTheme(isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
 
         // Scroll Progress Bar
@@ -420,6 +520,100 @@
                 }
             });
         });
+
+        // ===== BACK TO TOP =====
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== ANIMATED COUNTERS =====
+        const counters = document.querySelectorAll('.stat-number');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.target, 10);
+                    const duration = 1500;
+                    const step = target / (duration / 16);
+                    let current = 0;
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= target) {
+                            el.textContent = target;
+                            clearInterval(timer);
+                        } else {
+                            el.textContent = Math.floor(current);
+                        }
+                    }, 16);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(c => counterObserver.observe(c));
+
+        // ===== TYPEWRITER EFFECT =====
+        const typewriterEl = document.getElementById('typewriter');
+        const phrases = [
+            'Engenheiro de Software',
+            'Desenvolvedor Full-stack',
+            'Especialista em React',
+            'Desenvolvedor Node.js',
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const current = phrases[phraseIndex];
+            if (isDeleting) {
+                typewriterEl.textContent = current.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterEl.textContent = current.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let delay = isDeleting ? 60 : 100;
+
+            if (!isDeleting && charIndex === current.length) {
+                delay = 1800;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                delay = 400;
+            }
+
+            setTimeout(type, delay);
+        }
+        type();
+
+        // ===== SCROLL SPY - NAV ATIVO =====
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.nav a');
+
+        const spyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('nav-active');
+                        if (link.getAttribute('href') === '#' + entry.target.id) {
+                            link.classList.add('nav-active');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+
+        sections.forEach(sec => spyObserver.observe(sec));
 
         // Generate WhatsApp QR Code
         const whatsappURL = 'https://wa.me/5587981442922';
